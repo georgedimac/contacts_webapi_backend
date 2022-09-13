@@ -1,7 +1,7 @@
 
 # Contact List Backend
 
- C# .NET backend webapi 
+ C# .NET backend webapi . Uses EntityFramework and Sqlite.
 
 Built on: .net 6
 
