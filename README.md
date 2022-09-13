@@ -14,6 +14,11 @@ Built on: .net 6
 | PUT /contact/updateContact{id}    | Update an existing contact item | Contact item     | None                 |
 | DELETE /contact/deleteContact{id} | Delete an contact item          | None             | None                 |
 
+| Parameter | Type     | 
+| :-------- | :------- | 
+| `name` | `string` | 
+| `email` | `string` | 
+| `phone` | `string` | 
 
 ## Installation
 
