@@ -1,6 +1,7 @@
 ﻿using contact_app.Models;
 
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,17 @@ builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("WebApiDatabase");
 builder.Services.AddDbContext<ContactAppContext>(options => options.UseSqlite(connectionString));
+
+
+
+var devCorsPolicy = "devCorsPolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(devCorsPolicy, builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
 
 var app = builder.Build();
@@ -24,6 +36,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseCors(devCorsPolicy);
+
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -33,6 +48,8 @@ app.MapControllers();
 
 app.MapGet("/debug/routes", (IEnumerable<EndpointDataSource> endpointSources) =>
         string.Join("\n", endpointSources.SelectMany(source => source.Endpoints)));
+
+
 
 
 
