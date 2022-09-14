@@ -2,8 +2,12 @@
 # Contact List Backend
 
  C# .NET backend webapi . Uses EntityFramework and Sqlite.
+ 
+ Built on: .net 6
+ 
+ Includes Angular frontend in wwwroot folder (source is [here](https://github.com/georgedimac/contacts_webapi_frontend/))
 
-Built on: .net 6
+
 
 ## API Reference
 | **API**                           | **Description**                 | **Request body** | **Response body**    |
