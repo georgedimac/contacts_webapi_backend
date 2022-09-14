@@ -30,27 +30,28 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+
+//app.UseAuthorization();
 
 app.UseCors(devCorsPolicy);
 
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.MapControllers();
 
 
-app.MapGet("/debug/routes", (IEnumerable<EndpointDataSource> endpointSources) =>
-        string.Join("\n", endpointSources.SelectMany(source => source.Endpoints)));
-
-
-
+//app.MapGet("/debug/routes", (IEnumerable<EndpointDataSource> endpointSources) =>
+//        string.Join("\n", endpointSources.SelectMany(source => source.Endpoints)));
 
 
 app.Run();
