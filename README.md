@@ -13,10 +13,10 @@ Runs on : http://localhost:5076/
 | **API**                           | **Description**                 | **Request body** | **Response body**    |
 |-----------------------------------|---------------------------------|------------------|----------------------|
 | GET /contact/getAllContact        | Get all contacts                | None             | Array of to-do items |
-| GET /contact/getContact{id}           | Get contact Item                | Contact Item     | Contact Item         |
+| GET /contact/getContact?id={id}           | Get contact Item                | Contact Item     | Contact Item         |
 | POST /contact/addContact          | Add a new contact               | Contact Item     | Contact Item         |
-| PUT /contact/updateContact{id}    | Update an existing contact item | Contact item     | None                 |
-| DELETE /contact/deleteContact{id} | Delete an contact item          | None             | None                 |
+| PUT /contact/updateContact?id={id}    | Update an existing contact item | Contact item     | None                 |
+| DELETE /contact/deleteContact?id={id} | Delete an contact item          | None             | None                 |
 
 | Parameter | Type     | 
 | :-------- | :------- | 
