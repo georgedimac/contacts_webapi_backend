@@ -10,13 +10,10 @@ Runs on : http://localhost:5076/
 
 
 ## API Reference
-| **API**                           | **Description**                 | **Request body** | **Response body**    |
-|-----------------------------------|---------------------------------|------------------|----------------------|
-| GET /contact/getAllContact        | Get all contacts                | None             | Array of to-do items |
-| GET /contact/getContact?id={id}           | Get contact Item                | Contact Item     | Contact Item         |
-| POST /contact/addContact          | Add a new contact               | Contact Item     | Contact Item         |
-| PUT /contact/updateContact?id={id}    | Update an existing contact item | Contact item     | None                 |
-| DELETE /contact/deleteContact?id={id} | Delete an contact item          | None             | None                 |
+| **API**                           | **Description**                 
+|-----------------------------------|---------------------------------|
+| GET /contact/        | Get all contacts            
+| GET, POST, PUT, DELETE /contact/{id}           | Get, Add, Update, Delete Contact               | 
 
 | Parameter | Type     | 
 | :-------- | :------- | 
