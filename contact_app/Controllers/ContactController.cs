@@ -25,15 +25,17 @@ namespace contact_app.Controllers
 
 
         [HttpGet]
-        [Route("getAllContact")]
+        //[Route("getAllContact")]
         public IEnumerable<Contact> GetAll()
         {
             // fetch all contact records 
             return _context.Contact.ToList();
         }
 
-        [HttpGet("{id}")]
-        [Route("getContact")]
+        //[HttpGet("{id}")]
+        //[Route("getContact")]
+        [HttpGet]
+        [Route("{id}")]
         public IActionResult GetById(long id)
         {
             // filter contact records by contact id
@@ -45,7 +47,7 @@ namespace contact_app.Controllers
             return new ObjectResult(item);
         }
         [HttpPost]
-        [Route("addContact")]
+        //[Route("addContact")]
         public IActionResult Create([FromBody] Contact item)
         {
             // set bad request if contact data is not provided in body
@@ -64,8 +66,10 @@ namespace contact_app.Controllers
             return Ok(new { message = "Contact is added successfully." });
         }
 
-        [HttpPut("{id}")]
-        [Route("updateContact")]
+        //[HttpPut("{id}")]
+        //[Route("updateContact")]
+        [HttpPut]
+        [Route("{id}")]
         public IActionResult Update(long id, [FromBody] Contact item)
         {
             // set bad request if contact data is not provided in body
@@ -90,8 +94,10 @@ namespace contact_app.Controllers
         }
 
 
-        [HttpDelete("{id}")]
-        [Route("deleteContact")]
+        //[HttpDelete("{id}")]
+        //[Route("deleteContact")]
+        [HttpDelete]
+        [Route("{id}")]
         public IActionResult Delete(long id)
         {
             var contact = _context.Contact.FirstOrDefault(t => t.id == id);
