@@ -10,4 +10,4 @@ jobs:
       - name: Show environment v2
         run: env | grep ^GITHUB
       - name: Show ref v2
-        run: echo "===============> Version from $GITHUB_REF"
+        run: echo "===============> xVersion from $GITHUB_REF"
