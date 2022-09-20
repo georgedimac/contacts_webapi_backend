@@ -5,7 +5,7 @@
  
  Built on: .net 6
  
- Includes Angular frontend in wwwroot folder (source is [here](https://github.com/georgedimac/contacts_webapi_frontend/))
+ Includes Angular frontend in wwwroot folder (source is [here](https://github.com/georgedimac/contacts_webapi_frontend/tree/ver2))
 Runs on : http://localhost:5076/
 
 
